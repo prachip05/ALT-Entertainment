@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel= "stylesheet" type= "text/css" href= "static\style.css">
+  <script src="https://kit.fontawesome.com/240c369354.js" crossorigin="anonymous"></script>
+
+
+  <title>365 Entertainment</title>
+
+
+
+  <!-- Bootstrap CSS library -->
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" href=
+          "https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity=
+  "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous">
+    
+      <!-- jQuery library -->
+      <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+      </script>
+    
+      <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+      </script>
+    
+      <script src=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+      </script>
+
+  
+</head>
+<body style="background-color: black ;">
+    <div class="header">
+        <a href="index.html" class="logo">365</a>
+        <a href="movies.html" class="movies">Movies</a>
+        <a href="#tvseries" class="tvs">TV Series</a>
+        <a href="#audio" class="audio">Audio</a>
+      </div>
+    </div>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/abc1 (1).jpg" class="d-block w-100" alt="First Slide">
+        </div>
+        <div class="carousel-item">
+          <img src="images/abc2 (1).jpg" class="d-block w-100" alt="Second Slide">
+        </div>
+        <div class="carousel-item">
+          <img src="images/abc3 (1).jpg" class="d-block w-100" alt="Third Slide">
+        </div>
+        <div class="carousel-item">
+            <img src="images/abc4 (1).jpg" class="d-block w-100" alt="Fourth Slide">
+        </div>
+        <div class="carousel-item">
+            <img src="images/abc5 (1).jpg" class="d-block w-100" alt="Fifth Slide">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+
+
+      <ul class="navbar nav ml-auto" style="color:white; display: flex; justify-content: space-between;">
+        <!-- Dropdown list -->
+        <li>
+          <div class="movie-menu" ></div>
+            <button class="dropbtn" id="dropbtn" style="text-align: center; font-weight: bold; position: relative; line-height: 10px; margin-left: 20px;"><span id="genreText">Genre</span></button>
+            <div class="dropdown-content" id="mydropdown">
+              <a onclick="getMediaPosters(this.text)">All</a>
+              <a onclick="getMediaPosters(this.text)">Action</a>
+              <a onclick="getMediaPosters(this.text)">Drama</a>
+              <a onclick="getMediaPosters(this.text)">Sci-fi</a>
+            </div>
+            <div onclick="side_slide(-1)" class="dropdown-image">
+              <span class="fa fa-caret-down"></span>
+            </div>
+          </div>
+  
+        <li>
+        <!-- Search Box -->
+        <!-- <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input class="form-control" id="searchbar" oninput="updateResults()"
+                type="text" placeholder="Search your favorite movie title here" 
+                aria-label="Search" style="background-color: #FFDB58; width: 800px; text-align: center; align-self: right;">
+          </div> -->
+
+          <div class="menu-text">
+            <input type="text" class="search" id="mysearch" placeholder="Search your favourite movie title" oninput="updateResults()" style="background-color: #FFDB58; width: 800px; text-align: center; align-self: right;">
+                <span class="fa fa-search"></span>
+        </div> 
+
+      </li>
+    </li>
+               
+    
+
+
+
+
+    <!-- Popular in Action Section -->
+  <div class="film-section">
+    <div class="film-section-cards" id="movies-action">
+      <div class="inline-block" >
+        <img src ="images/aiyaary.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Aiyaary </h4>
+          <p class="Genre">Thriller, Action,Hindi,2018</p>
+        </div>
+      </div>
+    
+      <div class="inline-block">
+          <img src ="images/Action/avenger_endgame.webp" alt="Poster" style="width:100%; height: 100%;">
+          <div class="text-block">
+            <h4 style="font-weight: bold;" class="film-name">Avenger Endgame</h4>
+            <p>Action, Sci-fi,Hindi,2019</p>
+          </div>
+        </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/avenger.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Avenger </h4>
+          <p>Action, Adventure,Hindi,2012</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+       <img src ="images/Action/baaghi_3.webp" alt="Poster" style="width:100%;">
+       <div class="text-block">
+        <h4 style="font-weight: bold;" class="film-name">Baghi 3 </h4>
+        <p>Action, Thriller,Hindi,2020</p>
+       </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/baby.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Baby</h4>
+          <p>Action, Thriller,Hindi,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/bang bang.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Bang Bang </h4>
+          <p>Action, Romance,Hindi,2014</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/black_panther.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Black Panther </h4>
+          <p>Action, Adventure,Hindi,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/dabangg.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Dabangg </h4>
+          <p>Action, Romance,Hindi,2010</p>
+        </div>
+      </div>  
+
+      <div class="inline-block">
+        <img src ="images/Action/doctor strange.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Doctor Strange </h4>
+          <p>Action, Adventure,Hindi,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/ironman.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Ironman</h4>
+          <p>Action, Adventure,Hindi,2008</p>
+          </div>
+        </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/junglee.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Junglee </h4>
+          <p>Action, Adventure,Hindi,2019</p>
+          </div>
+        </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/khuda_haafiz.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Khuda Hafiz</h4>
+          <p>Action, Thriller,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/singham returns.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Singham Returns </h4>
+          <p>Action, Romance,Hindi,2014</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/tanhaji.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Tanhaji </h4>
+          <p>Action, History,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/thor_ragnarok.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">The Ragnarok </h4>
+          <p>Action, Sci-fi,Hindi,2017</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Action/veer.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Veer </h4>
+          <p>Romance, Drama,Hindi,2010</p>
+        </div>
+      </div>
+
+      
+      <div class="inline-block">
+        <img src ="images/Drama/mulan.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Mulan</h4>
+          <p>Action, Fantasy,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/the_sniper.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">The Sniper </h4>
+          <p>Action, Thriller,Hindi,2009</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/thebadbatch.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">The Bad Batch </h4>
+          <p>Action, Fiction,2021</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/rampage.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Rampage</h4>
+          <p>Action, Adventure,2018</p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Popular in Drama Section -->     
+
+    <div class="film-section-cards" id="movies-drama" style="display: inline-block;">
+      <div class="inline-block">
+        <img src ="images/Drama/angrezi_medium.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Angrezi Medium</h4>
+          <p>Drama,Hindi,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/baadshaho.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Badshaho </h4>
+          <p>Action, Thriller,Drama,Hindi,2017</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/bajrangi_bhaijaan.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Bajrangi Bhaijaan </h4>
+          <p>Action, Drama,Hindi,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/bigbull.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Bigbull </h4>
+          <p>Crime, Drama,Hindi,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/chhapaak.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Chapaak </h4>
+          <p>Drama,Biography,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/chjichhore.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Chichhore</h4>
+          <p>Drama, Comedy,Hindi,2019</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/dilbechara.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Dil Bechara</h4>
+          <p>Romance,Drama,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/dum_lagade_aaj.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name"> Dum Lagade Aj </h4>
+          <p>Romance,Drama,Tamil,2017</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/fvf.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Ford vs Ferrari </h4>
+          <p>Drama,Sport,Hindi,2019</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/grahan.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Grahan </h4>
+          <p>Drama,Hindi,2001</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/haraamkhor.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Haraamkhor </h4>
+          <p>Drama,Hindi,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/helicopter_eela.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name"> Helicopter Eela</h4>
+          <p>Drama,Hindi,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/highway.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name"> Highway</h4>
+          <p>Drama,Romance,Hindi,2014</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/jojorabbit.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">JoJo Rabbit </h4>
+          <p>War,Drama, Comedy,Hindi,2019</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/lifeofpi.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Life of Pi</h4>
+          <p>Adventure,Drama,Hindi,2012</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/love_sonia.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Love Sonia </h4>
+          <p>Drama,Hindi,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/mission_mangal.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Mission Mangal </h4>
+          <p>Drama,Sci-fi,Hindi,2019</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/mukti_bhavan.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Mukti Bhawan</h4>
+          <p>Drama,Comedy,Hindi,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/queenofkatwe.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Queen of Katwe</h4>
+          <p>Drama,Sport,Hindi,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/sadak_2.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Sadak 2 </h4>
+          <p>Drama,Action,Hindi,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Drama/shaadistan.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name"> Shadistan</h4>
+          <p>Drama,Hindi,2021</p>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+    <!-- Popular in Sci-Fi Section -->
+    <div class="film-section-cards" id="movies-sci-fi" style="display:inline-block;">
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/agentcarter.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Agent Carter </h4>
+          <p>Sci-fi,English,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/arrival.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Arrival </h4>
+          <p>Sci-fi,English,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/bloodshot.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Bloodhsot </h4>
+          <p>Action, Sci-fi,English,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/bumblebee.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Bumblebee</h4>
+          <p>Action, Sci-fi,English,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/coma.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Coma </h4>
+          <p>Action,Sci-fi,English,2019</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/extinction.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Extinction </h4>
+          <p>Sci-fi,Thriller,English,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/annihilation.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Annihilation </h4>
+          <p>Sci-fi,Horror,English,2018</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/westworld.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">West World </h4>
+          <p>Sci-fi,English,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/starwars.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Starwars</h4>
+          <p>Sci-fi,Hindi,2014</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/starwars_the_last_jedi.webp" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Starwars- The Last Jedi </h4>
+          <p>Sci-fi,Action,English,2017</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/the_5th_wave.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">The 5th Wave</h4>
+          <p>Action, Sci-fi,Action,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/the_martian.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">The Martian </h4>
+          <p>Sci-fi ,Adventure,English,2015</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/passengers.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Passengers </h4>
+          <p>Sci-fi, Romance,English,2016</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/tenet.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Tenet </h4>
+          <p>Action, Sci-fi,Englsih,2020</p>
+        </div>
+      </div>
+
+      <div class="inline-block">
+        <img src ="images/Sci-Fi/kong_vs_godzilla.jpg" alt="Poster" style="width:100%;">
+        <div class="text-block">
+          <h4 style="font-weight: bold;" class="film-name">Kong vs Godzilla </h4>
+          <p>Action, Sci-fi,English,2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="footer">
+  <a href="index.html" class="logo">365</a>
+  <p style="font-size:20px; color: black; text-align: left;">Powered by 365 Entertainment Portal 2019. All Rights Reserved.</p>
+</div>
+
+<script src="js\search.js"> </script>
+    
+</body>
+</html>
